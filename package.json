@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
+  "name": "royal-geni",
   "version": "1.0.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "description": "Vendor Platform",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",
@@ -53,9 +53,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/sanyamagrawal/royal-geni.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Sanyam Agrawal <Sanyam4u@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "better-npm-run": "0.0.5",
