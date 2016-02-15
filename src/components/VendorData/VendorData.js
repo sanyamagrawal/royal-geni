@@ -1,9 +1,9 @@
 import React from 'react';
-import {Grid} from 'components';
+import { Grid } from 'components';
 
 const data = [
-  { id: '1', firstName: 'John', lastName: 'Bobson'},
-  { id: '2', firstName: 'Bob', lastName: 'Mclaren'}
+  { id: '1', firstName: 'John', lastName: 'Bobson' },
+  { id: '2', firstName: 'Bob', lastName: 'Mclaren' }
 ];
 
 // const columns = [
@@ -15,35 +15,36 @@ const data = [
 // -                      columns={this.props.columns} />
 class VendorData extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
 
-      this.state = {
-          data: data
+    this.state = {
+        data
       };
+  }
+
+  handleFilter = (column, value, allFilterValues) => {
+      // go over all filters and apply them
+      let originalData = data;
+
+      Object.keys(allFilterValues).forEach((name) => {
+          const columnFilter = `${allFilterValues[name]}`.toUpperCase();
+
+          if (columnFilter === '') {
+              return;
+          }
+
+          originalData = originalData.filter((item) => {
+              if ((`${item[name]}`).toUpperCase().indexOf(columnFilter) === 0) {
+                  return true;
+              }
+          });
+      });
+
+      this.setState({
+          data: originalData
+        });
     }
 
-    handleFilter = (column, value, allFilterValues) => {
-	    // go over all filters and apply them
-        let originalData = data;
-
-        Object.keys(allFilterValues).forEach(function allFilter(name) {
-            const columnFilter = (allFilterValues[name] + '').toUpperCase();
-
-    		if (columnFilter === '') {
-    			return;
-    		}
-
-    		originalData = originalData.filter(function fil(item) {
-                if ((item[name] + '').toUpperCase().indexOf(columnFilter) === 0) {
-                    return true;
-                }
-    		});
-        });
-
-        this.setState({
-            data: originalData
-        });
-    }
     render() {
         return (
             <div>

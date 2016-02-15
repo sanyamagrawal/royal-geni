@@ -6,7 +6,7 @@ import './Select.scss';
 class VendorSelect extends React.Component {
 
 	constructor(props) {
-    	super(props);
+		super(props);
 		this.state = {
 			value: []
 		};
@@ -24,7 +24,8 @@ class VendorSelect extends React.Component {
 						value={this.state.value}
 						placeholder="Select Job"
 						options={serviceList}
-						onChange={this.handleSelectChange} />
+						onChange={this.handleSelectChange}
+				/>
 			</div>
 		);
 	}
