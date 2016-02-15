@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { actions as counterActions } from '../../redux/modules/counter';
 import DuckImage from './Duck.jpg';
 import './HomeView.scss';
-import { VendorData, Select, serviceList } from 'components';
+import { Select, serviceList, vendorList, VendorListGrid } from 'components';
 
 // We define mapStateToProps where we'd normally use
 // the @connect decorator so the data requirements are clear upfront, but then
@@ -28,7 +28,8 @@ export class HomeView extends React.Component {
       super(props);
 
       this.state = {
-          vendor: ''
+          service: '',
+          vendorsList: []
       };
   }
 
@@ -36,9 +37,12 @@ export class HomeView extends React.Component {
       this.props.increment(1);
   }
 
-  onVendorSelect = (vendor) => {
+  onServiceSelect = (service) => {
+      const vendorsList = vendorList[service];
+
       this.setState({
-          vendor
+          service,
+          vendorsList
       });
   }
 
@@ -47,12 +51,18 @@ export class HomeView extends React.Component {
           <div className="container">
             <h1>Royal Geni </h1>
             <h1>Select Vendor </h1>
-            <Select placeholder = "Select a Vendor"
+
+            <Select name= "ServiceList"
+                    placeholder = "Select a Service"
                     options = {serviceList}
-                    onSelect={this.onVendorSelect}
-                    value={this.state.vendor}
+                    onSelect={this.onServiceSelect}
+                    value={this.state.service}
             />
-            <VendorData vendor={this.state.vendor}/>
+
+            <VendorListGrid service={this.state.service}
+                            data={this.state.vendorsList}
+            />
+
         <div className="row">
           <div className="col-xs-2 col-xs-offset-5">
             <img className="duck"

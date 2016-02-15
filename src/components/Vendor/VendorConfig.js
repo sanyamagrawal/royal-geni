@@ -54,7 +54,7 @@ const serviceList = [{
 
 const vendorList = {
   handyMan: [{
-      'S.No': '1',
+      id: '1',
       occupation: 'Carpenter',
       label: 'Narayan',
       location: 'thapathai',
@@ -62,7 +62,7 @@ const vendorList = {
       remark: 'indian/ fast/ expensive'
     },
       {
-        'S.No': '2',
+        id: '2',
         occupation: 'computer / camrea',
         label: 'Praduman',
         location: '',
@@ -70,7 +70,7 @@ const vendorList = {
         remark: 'reliable/jugad'
       },
       {
-        'S.No': '3',
+        id: '3',
         occupation: 'camera / computer',
         label: 'suresji',
         location: '',
@@ -78,7 +78,7 @@ const vendorList = {
         remark: 'good /'
       },
       {
-        'S.No': '4',
+        id: '4',
         occupation: 'plumber',
         label: 'malik',
         location: '',
@@ -86,7 +86,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '5',
+        id: '5',
         occupation: 'water proofing',
         label: 'sanker',
         location: '',
@@ -94,7 +94,7 @@ const vendorList = {
         remark: 'good'
       },
       {
-        'S.No': '6',
+        id: '6',
         occupation: 'painter',
         label: 'kesav',
         location: '',
@@ -102,7 +102,7 @@ const vendorList = {
         remark: 'good'
       },
       {
-        'S.No': '7',
+        id: '7',
         occupation: 'painter',
         label: 'santosh',
         location: '',
@@ -110,7 +110,7 @@ const vendorList = {
         remark: 'reliable/expensive'
       },
       {
-        'S.No': '8',
+        id: '8',
         occupation: 'acp fitting',
         label: 'abhay',
         location: '',
@@ -118,7 +118,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '9',
+        id: '9',
         occupation: 'false celing / paint / partician',
         label: 'raj kumar',
         location: '',
@@ -126,7 +126,7 @@ const vendorList = {
         remark: 'reliable/fast'
       },
       {
-        'S.No': '10',
+        id: '10',
         occupation: 'glass sticker',
         label: 'mukesh',
         location: '',
@@ -134,7 +134,7 @@ const vendorList = {
         remark: 'good'
       },
       {
-        'S.No': '11',
+        id: '11',
         occupation: 'glass',
         label: 'sanjay',
         location: '',
@@ -142,7 +142,7 @@ const vendorList = {
         remark: 'owner / fast'
       },
       {
-        'S.No': '12',
+        id: '12',
         occupation: 'Cleaning / security / etc',
         label: 'Royal services',
         location: '',
@@ -150,7 +150,7 @@ const vendorList = {
         remark: 'they provide lot of services'
       },
       {
-        'S.No': '13',
+        id: '13',
         occupation: 'sofa / civil / electrical etc',
         label: 'Nepal Solution',
         location: '',
@@ -158,7 +158,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '14',
+        id: '14',
         occupation: 'Electrician',
         label: 'Rajkumar',
         location: '',
@@ -166,7 +166,7 @@ const vendorList = {
         remark: 'reliable/expensive'
       },
       {
-        'S.No': '15',
+        id: '15',
         occupation: 'Plumber',
         label: 'Gangadhar',
         location: '',
@@ -174,7 +174,7 @@ const vendorList = {
         remark: 'Very good/ reliable'
       },
       {
-        'S.No': '16',
+        id: '16',
         occupation: 'Computer/wifi/laptop',
         label: 'Aftab',
         location: '',
@@ -182,7 +182,7 @@ const vendorList = {
         remark: 'good / Jugad'
       },
       {
-        'S.No': '17',
+        id: '17',
         occupation: 'Painter (designs & official)',
         label: 'Balram',
         location: '',
@@ -190,7 +190,7 @@ const vendorList = {
         remark: 'very good/ reliable'
       },
       {
-        'S.No': '18',
+        id: '18',
         occupation: 'Painter (House & Rooms)',
         label: 'Jairam',
         location: '',
@@ -198,7 +198,7 @@ const vendorList = {
         remark: 'very good/ reliable'
       },
       {
-        'S.No': '19',
+        id: '19',
         occupation: 'Carpenter',
         label: 'Shanker',
         location: '',
@@ -206,7 +206,7 @@ const vendorList = {
         remark: 'good'
       },
       {
-        'S.No': '20',
+        id: '20',
         occupation: 'Computer/wifi/ac/generator',
         label: 'Globallink (Umesh)',
         location: 'thapathali',
@@ -216,7 +216,7 @@ const vendorList = {
     ],
   cakeAndBakery: [
       {
-        'S.No': '',
+        id: '',
         label: '',
         'Contact Person': '',
         location: '',
@@ -224,7 +224,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '1',
+        id: '1',
         label: 'European Bakery',
         'Contact Person': '',
         location: 'Bhakta Marga',
@@ -232,7 +232,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '2',
+        id: '2',
         label: 'Vienna Bakery',
         'Contact Person': '',
         location: 'Jhamsikhel',
@@ -240,7 +240,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '3',
+        id: '3',
         label: 'Annapurna Cake Shop',
         'Contact Person': '',
         location: 'Durbar Marg',
@@ -248,7 +248,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '4',
+        id: '4',
         label: 'Annapurna Cake Shop',
         'Contact Person': '',
         location: 'Jhamsikhel',
@@ -256,7 +256,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '5',
+        id: '5',
         label: 'Radisson Cake Shop',
         'Contact Person': '',
         location: 'Lazimpat',
@@ -264,7 +264,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '6',
+        id: '6',
         label: 'Bakes n Cakes',
         'Contact Person': '',
         location: 'Durbar Marg',
@@ -272,7 +272,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '7',
+        id: '7',
         label: 'Le Sukre',
         'Contact Person': '',
         location: '',
@@ -280,7 +280,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '8',
+        id: '8',
         label: 'Fine Grain Bakery',
         'Contact Person': '',
         location: 'Swayambhu',
@@ -288,7 +288,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '9',
+        id: '9',
         label: 'Bake my Wish by Shivani',
         'Contact Person': 'Shivani Agarwal',
         location: 'New Baneshwor',
@@ -296,7 +296,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '10',
+        id: '10',
         label: 'Imago Dei',
         'Contact Person': '',
         location: '',
@@ -304,7 +304,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '11',
+        id: '11',
         label: 'The Bakery Cafe',
         'Contact Person': '',
         location: '',
@@ -312,7 +312,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '12',
+        id: '12',
         label: 'Hermann Helmer\'s German Bakery',
         'Contact Person': '',
         location: 'Jawalakhel,',
@@ -320,7 +320,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '13',
+        id: '13',
         label: 'Chefs Bakery & Confectionery',
         'Contact Person': '',
         location: 'Baneshwor,',
@@ -328,7 +328,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '14',
+        id: '14',
         label: 'European Bakery',
         'Contact Person': '',
         location: 'Baluwatar',
@@ -336,7 +336,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '15',
+        id: '15',
         label: 'JULIE\'S CAKES & PASTRIES',
         'Contact Person': '',
         location: 'Lazimpat',
@@ -344,7 +344,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '16',
+        id: '16',
         label: 'HERMANN HELMERS',
         'Contact Person': '',
         location: 'Jawalakhel,',
@@ -352,7 +352,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '17',
+        id: '17',
         label: 'Royal Alina\'s Bakery Cafe',
         'Contact Person': '',
         location: 'Kanti Path',
@@ -360,7 +360,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '18',
+        id: '18',
         label: 'Fine Grains Bakery',
         'Contact Person': '',
         location: 'swayambhu',
@@ -368,7 +368,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '20',
+        id: '20',
         label: 'Makoo Bakery',
         'Contact Person': '',
         location: 'Jawalakhel',
@@ -376,7 +376,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '21',
+        id: '21',
         label: 'ALINA\'S BAKERY CAFE',
         'Contact Person': '',
         location: '',
@@ -384,7 +384,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '22',
+        id: '22',
         label: 'just baked Bakery & Cafe',
         'Contact Person': '',
         location: 'Battisputali',
@@ -392,7 +392,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '23',
+        id: '23',
         label: 'Vienna Bakery',
         'Contact Person': '',
         location: 'Jawalakhel',
@@ -400,7 +400,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '24',
+        id: '24',
         label: 'Nanglo Bakery & Cafe',
         'Contact Person': '',
         location: 'Durbar Marg',
@@ -408,7 +408,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '25',
+        id: '25',
         label: 'Krishna Bakery & Confectionery',
         'Contact Person': '',
         location: 'kamal pokhari',
@@ -416,7 +416,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '26',
+        id: '26',
         label: 'Kathmandu J Bakery',
         'Contact Person': '',
         location: '',
@@ -424,7 +424,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '27',
+        id: '27',
         label: 'Snowman Cafe',
         'Contact Person': '',
         location: 'Jhochhen',
@@ -432,7 +432,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '28',
+        id: '28',
         label: 'ND\'s Cafe & Restaurant',
         'Contact Person': '',
         location: 'mahabouddha',
@@ -440,7 +440,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '28',
+        id: '28',
         label: 'master baker and confectionery',
         'Contact Person': '',
         location: '',
@@ -448,7 +448,7 @@ const vendorList = {
         remark: ''
       },
       {
-        'S.No': '29',
+        id: '29',
         label: 'Brezel Bakery',
         'Contact Person': '',
         location: 'Thamel',

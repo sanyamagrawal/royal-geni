@@ -1,30 +1,39 @@
 import React from 'react';
 import { Grid } from 'components';
 
-const data = [
-  { id: '1', firstName: 'John', lastName: 'Bobson' },
-  { id: '2', firstName: 'Bob', lastName: 'Mclaren' }
-];
+const VendorColumns = [
+    {
+      key: 'id',
+      name: 'ID'
+    },
+    {
+      key: 'occupation',
+      name: 'Occupation'
+    },
+    {
+      key: 'label',
+      name: 'Name'
+    }
+  ];
 
-// const columns = [
-//   { name: 'firstName'},
-//   { name: 'lastName'}
-// ];
-// return (<Grid idProperty={this.props.idProperty}
-// -                      dataSource={this.props.dataSource}
-// -                      columns={this.props.columns} />
 class VendorData extends React.Component {
+
+    static propTypes = {
+      data: React.PropTypes.array.isRequired,
+      service: React.PropTypes.string.isRequired
+    }
+
   constructor(props) {
     super(props);
 
     this.state = {
-        data
+        data: this.props.data
       };
   }
 
   handleFilter = (column, value, allFilterValues) => {
       // go over all filters and apply them
-      let originalData = data;
+      let originalData = this.props.data;
 
       Object.keys(allFilterValues).forEach((name) => {
           const columnFilter = `${allFilterValues[name]}`.toUpperCase();
@@ -45,10 +54,20 @@ class VendorData extends React.Component {
         });
     }
 
+    rowGetter = (index) => {
+        return this.props.data[index];
+    }
+
     render() {
+        const rowsLength = this.props.data.length;
+
         return (
             <div>
-                <Grid />
+                <Grid columns = {VendorColumns}
+                      rowGetter={this.rowGetter}
+                      rowsCount={rowsLength}
+                      minHeight={500}
+                />
             </div>
         );
     }
