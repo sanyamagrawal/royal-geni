@@ -27,31 +27,51 @@ class VendorData extends React.Component {
     super(props);
 
     this.state = {
-        data: this.props.data
+        originalRows: this.props.data,
+        filters: {},
+        rows: this.props.data.slice(0)
       };
   }
 
-  handleFilter = (column, value, allFilterValues) => {
-      // go over all filters and apply them
-      let originalData = this.props.data;
-
-      Object.keys(allFilterValues).forEach((name) => {
-          const columnFilter = `${allFilterValues[name]}`.toUpperCase();
-
-          if (columnFilter === '') {
-              return;
-          }
-
-          originalData = originalData.filter((item) => {
-              if ((`${item[name]}`).toUpperCase().indexOf(columnFilter) === 0) {
-                  return true;
-              }
-          });
-      });
-
+  componentWillReceiveProps(nextProps) {
       this.setState({
-          data: originalData
-        });
+          originalRows: nextProps.data,
+          filters: {},
+          rows: nextProps.data.slice(0)
+      });
+  }
+
+  filterRows = (originalRows, filters) => {
+    const rows = originalRows.filter((r) => {
+      let include = true;
+      for (const columnKey in filters) {
+        if (filters.hasOwnProperty(columnKey)) {
+          const rowValue = r[columnKey].toString().toLowerCase();
+          if (rowValue.indexOf(filters[columnKey].toLowerCase()) === -1) {
+            include = false;
+          }
+        }
+      }
+      return include;
+    });
+    return rows;
+  }
+
+  setStateChange(filter) {
+      const currentState = this.state;
+
+      if (filter.filterTerm) {
+          currentState.filters[filter.columnKey] = filter.filterTerm;
+      } else {
+          delete currentState.filters[filter.columnKey];
+      }
+
+      currentState.rows = this.filterRows(currentState.originalRows, currentState.filters);
+      return currentState;
+  }
+
+  handleFilterChange = (filter) => {
+        this.setState(this.setStateChange.call(this, filter));
     }
 
     rowGetter = (index) => {
@@ -59,7 +79,7 @@ class VendorData extends React.Component {
     }
 
     render() {
-        const rowsLength = this.props.data.length;
+        const rowsLength = this.state.rows.length;
 
         return (
             <div>
@@ -67,6 +87,7 @@ class VendorData extends React.Component {
                       rowGetter={this.rowGetter}
                       rowsCount={rowsLength}
                       minHeight={500}
+                      onAddFilter = {this.handleFilterChange}
                 />
             </div>
         );

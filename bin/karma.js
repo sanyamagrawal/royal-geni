@@ -1,3 +1,3 @@
-import karmaConfig from '../build/karma.conf'
+import karmaConfig from '../build/karma.conf';
 
-module.exports = karmaConfig // because Karma is special
+module.exports = karmaConfig; // because Karma is special
