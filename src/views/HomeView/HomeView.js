@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { actions as counterActions } from '../../redux/modules/counter';
 import DuckImage from './Duck.jpg';
 import './HomeView.scss';
-import { VendorData, VendorSelect } from 'components';
+import { VendorData, Select, serviceList } from 'components';
 
 // We define mapStateToProps where we'd normally use
 // the @connect decorator so the data requirements are clear upfront, but then
@@ -24,20 +24,37 @@ export class HomeView extends React.Component {
     increment: PropTypes.func.isRequired
   };
 
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          vendor: ''
+      };
+  }
+
   onClick = () => {
       this.props.increment(1);
   }
 
-  render() {
-    return (
-      <div className="container">
-      <h1>Royal Geni </h1>
-      <h1>Select Vendor </h1>
-      <VendorSelect placeholder="Select a Vendor"/>
+  onVendorSelect = (vendor) => {
+      this.setState({
+          vendor
+      });
+  }
 
+  render() {
+      return (
+          <div className="container">
+            <h1>Royal Geni </h1>
+            <h1>Select Vendor </h1>
+            <Select placeholder = "Select a Vendor"
+                    options = {serviceList}
+                    onSelect={this.onVendorSelect}
+                    value={this.state.vendor}
+            />
+            <VendorData vendor={this.state.vendor}/>
         <div className="row">
           <div className="col-xs-2 col-xs-offset-5">
-            <VendorData />
             <img className="duck"
               src={DuckImage}
               alt="This is a duck, because Redux."
